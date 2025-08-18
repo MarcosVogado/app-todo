@@ -1,0 +1,12 @@
+@import '../../../../../dist/style/variables.css';
+
+h1 {
+    width: 100%;
+    padding: 15px 0;
+
+    text-align: center;
+    font-size: 18px;
+    color: var(--secondary-text-color);
+
+    background-color: var(--tertiary-background-color);
+}
