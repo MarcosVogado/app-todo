@@ -12,6 +12,18 @@ body {
     background-color: var(--primary-background-color);
 }
 
+ul {
+    list-style: none;
+}
+
+textarea:focus, input:focus, button {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
 /*Classes*/
 
 .container {
