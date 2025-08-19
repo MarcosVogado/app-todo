@@ -1,0 +1,18 @@
+@import '../../../../../dist/style/variables.css';
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+:host button {
+  border: none;
+  border-radius: 50px;
+  background: var(--denger-color);
+  font-size: 16px;
+  color: var(--secondary-text-color);
+  width: 60%;
+  padding: 10px;
+}
