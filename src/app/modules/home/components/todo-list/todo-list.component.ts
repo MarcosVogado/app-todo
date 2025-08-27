@@ -12,8 +12,7 @@ export class TodoListComponent implements OnInit {
 
   //Declarando variáveis
   public taskList: Array<TaskList> = [
-    {task: "Minha nova Task", checked: true},
-    {task: "Minha nova Task", checked: false}
+    
   ];
 
   constructor() { }
