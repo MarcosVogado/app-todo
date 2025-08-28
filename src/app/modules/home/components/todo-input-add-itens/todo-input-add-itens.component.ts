@@ -7,7 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class TodoInputAddItensComponent implements OnInit {
 
-  @Output() public emmitItemTaskList = new EventEmitter();
+  @Output() public emitItemTaskList = new EventEmitter();
 
   public addItemTaskList: string = "";
 
@@ -17,7 +17,10 @@ export class TodoInputAddItensComponent implements OnInit {
   }
 
   public submitItemTaskList(){
-    console.log(this.addItemTaskList)
+    if(this.addItemTaskList.length != 0){
+      this.emitItemTaskList.emit(this.addItemTaskList);
+      this.addItemTaskList = "";
+    }
   }
 
 }
