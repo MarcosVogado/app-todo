@@ -12,14 +12,17 @@ import { first, last } from 'rxjs';
 export class TodoListComponent implements DoCheck {
 
   //Declarando variáveis
-  public taskList: Array<TaskList> = [
-    
-  ];
+  public taskList: Array<TaskList> = JSON.parse(localStorage.getItem("list") || '[]') 
 
   constructor() { }
 
   ngDoCheck() {
-    this.taskList.sort( (first, last) =>Number(first.checked) - Number(last.checked) )
+    this.setLocalStorage()
+    if(this.taskList){
+      this.taskList.sort( (first, last) =>Number(first.checked) - Number(last.checked) )
+      localStorage.setItem("list", JSON.stringify(this.taskList))
+    }
+    
   }
 
   public setEmitItemTaskList(event: string){
@@ -46,6 +49,10 @@ export class TodoListComponent implements DoCheck {
         this.deleteItemTaskList(index);
       }
     }
+  }
+
+  public setLocalStorage(){
+
   }
 
 }
